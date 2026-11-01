@@ -1,0 +1,35 @@
+{
+  "id": "loan-review-form",
+  "type": "default",
+  "components": [
+    {
+      "type": "select",
+      "key": "reviewOutcome",
+      "label": "Review outcome",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Approve",
+          "value": "APPROVED"
+        },
+        {
+          "label": "Reject",
+          "value": "REJECTED"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "key": "reviewComments",
+      "label": "Reviewer comments",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "schemaVersion": 18,
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0"
+}

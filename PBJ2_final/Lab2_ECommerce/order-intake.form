@@ -1,0 +1,113 @@
+{
+  "id": "order-intake-form",
+  "type": "default",
+  "components": [
+    {
+      "type": "textfield",
+      "key": "customerRef",
+      "label": "Customer reference",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "textfield",
+      "key": "productId",
+      "label": "Product ID",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "number",
+      "key": "quantity",
+      "label": "Quantity",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "number",
+      "key": "unitPrice",
+      "label": "Unit price (INR)",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "number",
+      "key": "availableStock",
+      "label": "Simulated stock quantity",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "select",
+      "key": "customerCategory",
+      "label": "Customer category",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Standard",
+          "value": "STANDARD"
+        },
+        {
+          "label": "Premium",
+          "value": "PREMIUM"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "key": "deliveryPreference",
+      "label": "Delivery preference",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Standard",
+          "value": "STANDARD"
+        },
+        {
+          "label": "Express",
+          "value": "EXPRESS"
+        }
+      ]
+    },
+    {
+      "type": "textfield",
+      "key": "paymentToken",
+      "label": "Mock payment token",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "checkbox",
+      "key": "simulateWorkerFailure",
+      "label": "Simulate worker failure (testing only)"
+    },
+    {
+      "type": "checkbox",
+      "key": "simulateInventoryFailure",
+      "label": "Simulate inventory worker failure (testing only)"
+    },
+    {
+      "type": "checkbox",
+      "key": "simulatePaymentFailure",
+      "label": "Simulate payment API failure (testing only)"
+    },
+    {
+      "type": "checkbox",
+      "key": "forcePaymentDecline",
+      "label": "Force payment decline (testing only)"
+    }
+  ],
+  "schemaVersion": 18,
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0"
+}

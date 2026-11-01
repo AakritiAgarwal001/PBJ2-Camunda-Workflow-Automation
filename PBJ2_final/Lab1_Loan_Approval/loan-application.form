@@ -1,0 +1,104 @@
+{
+  "id": "loan-application-form",
+  "type": "default",
+  "components": [
+    {
+      "type": "textfield",
+      "key": "applicantId",
+      "label": "Applicant ID",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "textfield",
+      "key": "applicantName",
+      "label": "Applicant name",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "number",
+      "key": "requestedLoanAmount",
+      "label": "Requested loan amount (INR)",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "number",
+      "key": "monthlyIncome",
+      "label": "Monthly income (INR)",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "select",
+      "key": "employmentStatus",
+      "label": "Employment status",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Salaried",
+          "value": "SALARIED"
+        },
+        {
+          "label": "Self employed",
+          "value": "SELF_EMPLOYED"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "key": "creditHistory",
+      "label": "Credit history",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Good",
+          "value": "GOOD"
+        },
+        {
+          "label": "Average",
+          "value": "AVERAGE"
+        },
+        {
+          "label": "Poor",
+          "value": "POOR"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "key": "creditScore",
+      "label": "Synthetic credit score (300–900)",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "checkbox",
+      "key": "simulateWorkerFailure",
+      "label": "Simulate worker failure (testing only)"
+    },
+    {
+      "type": "checkbox",
+      "key": "simulateApiFailure",
+      "label": "Simulate credit API failure (testing only)"
+    },
+    {
+      "type": "checkbox",
+      "key": "simulateApiTimeout",
+      "label": "Simulate credit API timeout (testing only)"
+    }
+  ],
+  "schemaVersion": 18,
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0"
+}

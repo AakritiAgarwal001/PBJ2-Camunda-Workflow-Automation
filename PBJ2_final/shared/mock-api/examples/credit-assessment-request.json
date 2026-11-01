@@ -1,0 +1,8 @@
+{
+  "applicantId": "APP-001",
+  "requestedLoanAmount": 300000,
+  "monthlyIncome": 50000,
+  "creditHistory": "GOOD",
+  "creditScore": 760,
+  "simulateFailure": false
+}

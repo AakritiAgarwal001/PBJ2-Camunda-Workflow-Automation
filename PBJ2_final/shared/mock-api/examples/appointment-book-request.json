@@ -1,0 +1,6 @@
+{
+  "patientRef": "PAT-001",
+  "selectedSlot": "09:00",
+  "appointmentPreference": "Morning",
+  "simulateFailure": false
+}

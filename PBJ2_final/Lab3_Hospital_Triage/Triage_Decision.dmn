@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:definitions xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:ns0="https://www.omg.org/spec/DMN/20191111/MODEL/" id="Definitions_triageDecision" name="Educational Hospital Triage Decision" namespace="http://camunda.org/schema/1.0/dmn" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+  <ns0:decision id="triageDecision" name="Educational Hospital Triage Decision">
+    <ns0:decisionTable id="DecisionTable_triageDecision" hitPolicy="FIRST">
+      <ns0:input id="Input_1" label="Red-flag indicator">
+        <ns0:inputExpression id="InputExpression_1" typeRef="boolean">
+          <ns0:text>redFlag</ns0:text>
+        </ns0:inputExpression>
+      </ns0:input>
+      <ns0:input id="Input_2" label="Urgency indicator">
+        <ns0:inputExpression id="InputExpression_2" typeRef="string">
+          <ns0:text>urgencyIndicator</ns0:text>
+        </ns0:inputExpression>
+      </ns0:input>
+      <ns0:output id="Output_1" name="triageDecision" label="Triage category" typeRef="string" />
+      <ns0:rule id="Rule_1">
+        <ns0:description>A red-flag indicator routes directly to immediate human assessment in this synthetic classroom scenario.</ns0:description>
+        <ns0:inputEntry id="Rule_1_Input_1">
+          <ns0:text>true</ns0:text>
+        </ns0:inputEntry>
+        <ns0:inputEntry id="Rule_1_Input_2">
+          <ns0:text>-</ns0:text>
+        </ns0:inputEntry>
+        <ns0:outputEntry id="Rule_1_Output">
+          <ns0:text>"URGENT_ASSESSMENT"</ns0:text>
+        </ns0:outputEntry>
+      </ns0:rule>
+      <ns0:rule id="Rule_2">
+        <ns0:description>High urgency requires priority staff review.</ns0:description>
+        <ns0:inputEntry id="Rule_2_Input_1">
+          <ns0:text>-</ns0:text>
+        </ns0:inputEntry>
+        <ns0:inputEntry id="Rule_2_Input_2">
+          <ns0:text>"HIGH"</ns0:text>
+        </ns0:inputEntry>
+        <ns0:outputEntry id="Rule_2_Output">
+          <ns0:text>"PRIORITY_REVIEW"</ns0:text>
+        </ns0:outputEntry>
+      </ns0:rule>
+      <ns0:rule id="Rule_3">
+        <ns0:description>Medium urgency requires priority staff review.</ns0:description>
+        <ns0:inputEntry id="Rule_3_Input_1">
+          <ns0:text>-</ns0:text>
+        </ns0:inputEntry>
+        <ns0:inputEntry id="Rule_3_Input_2">
+          <ns0:text>"MEDIUM"</ns0:text>
+        </ns0:inputEntry>
+        <ns0:outputEntry id="Rule_3_Output">
+          <ns0:text>"PRIORITY_REVIEW"</ns0:text>
+        </ns0:outputEntry>
+      </ns0:rule>
+      <ns0:rule id="Rule_4">
+        <ns0:description>All other requests are routine.</ns0:description>
+        <ns0:inputEntry id="Rule_4_Input_1">
+          <ns0:text>-</ns0:text>
+        </ns0:inputEntry>
+        <ns0:inputEntry id="Rule_4_Input_2">
+          <ns0:text>-</ns0:text>
+        </ns0:inputEntry>
+        <ns0:outputEntry id="Rule_4_Output">
+          <ns0:text>"ROUTINE"</ns0:text>
+        </ns0:outputEntry>
+      </ns0:rule>
+    </ns0:decisionTable>
+  </ns0:decision>
+</ns0:definitions>

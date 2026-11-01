@@ -1,0 +1,4 @@
+{
+  "error": "simulated_service_failure",
+  "message": "Synthetic 503. Set simulateFailure=false and retry the connector job."
+}

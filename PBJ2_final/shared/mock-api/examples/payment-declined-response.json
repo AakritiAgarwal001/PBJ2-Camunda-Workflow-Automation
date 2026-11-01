@@ -1,0 +1,6 @@
+{
+  "paymentStatus": "DECLINED",
+  "transactionRef": "SYN-TXN-001",
+  "amount": 850,
+  "currency": "INR"
+}

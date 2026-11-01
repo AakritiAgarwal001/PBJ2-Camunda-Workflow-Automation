@@ -1,0 +1,14 @@
+camunda:
+  client:
+    mode: self-managed
+    auth:
+      method: none
+    rest-address: ${CAMUNDA_REST_ADDRESS:http://localhost:8080}
+logging:
+  level:
+    io.camunda: INFO
+    com.pbj2: INFO
+
+pbj2:
+  mock-api:
+    base-url: ${PBJ2_MOCK_API_BASE_URL:http://localhost:8081}

@@ -1,0 +1,39 @@
+{
+  "id": "no-slot-review-form",
+  "type": "default",
+  "components": [
+    {
+      "type": "select",
+      "key": "staffAction",
+      "label": "Staff action",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Contact patient",
+          "value": "CONTACT_PATIENT"
+        },
+        {
+          "label": "Reschedule",
+          "value": "RESCHEDULE"
+        },
+        {
+          "label": "Escalate",
+          "value": "ESCALATE"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "key": "staffNotes",
+      "label": "Follow-up notes",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "schemaVersion": 18,
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0"
+}

@@ -1,0 +1,8 @@
+{
+  "customerRef": "CUST-001",
+  "productId": "SKU-101",
+  "paymentToken": "tok_test_approved",
+  "amount": 2500,
+  "simulateFailure": false,
+  "forceDecline": false
+}

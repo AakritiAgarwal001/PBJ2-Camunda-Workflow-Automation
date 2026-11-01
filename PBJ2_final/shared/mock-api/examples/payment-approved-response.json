@@ -1,0 +1,6 @@
+{
+  "paymentStatus": "APPROVED",
+  "transactionRef": "SYN-TXN-001",
+  "amount": 2500,
+  "currency": "INR"
+}

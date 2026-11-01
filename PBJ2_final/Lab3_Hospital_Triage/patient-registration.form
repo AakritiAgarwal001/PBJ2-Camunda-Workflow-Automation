@@ -1,0 +1,75 @@
+{
+  "id": "patient-registration-form",
+  "type": "default",
+  "components": [
+    {
+      "type": "textfield",
+      "key": "patientRef",
+      "label": "Synthetic patient reference (e.g. PAT-001)",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "textfield",
+      "key": "appointmentPreference",
+      "label": "Appointment preference (e.g. Morning)",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "key": "symptomsSummary",
+      "label": "Educational symptoms summary (synthetic only)",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "checkbox",
+      "key": "redFlag",
+      "label": "Red-flag indicator (educational test data)"
+    },
+    {
+      "type": "select",
+      "key": "urgencyIndicator",
+      "label": "Urgency indicator",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Low",
+          "value": "LOW"
+        },
+        {
+          "label": "Medium",
+          "value": "MEDIUM"
+        },
+        {
+          "label": "High",
+          "value": "HIGH"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "key": "forceNoSlots",
+      "label": "Force no appointment slots (testing only)"
+    },
+    {
+      "type": "checkbox",
+      "key": "simulateWorkerFailure",
+      "label": "Simulate worker failure (testing only)"
+    },
+    {
+      "type": "checkbox",
+      "key": "simulateSchedulingFailure",
+      "label": "Simulate scheduling API failure (testing only)"
+    }
+  ],
+  "schemaVersion": 18,
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0"
+}
